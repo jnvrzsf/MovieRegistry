@@ -1,0 +1,18 @@
+<div *ngIf="movie" class="card text-white bg-dark" style="margin: 1em;">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{movie.picture}}" style="width: 100%;">
+        </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                <h4 class="card-title">{{movie.title}} ({{movie.year}})</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Directed by {{movie.director}}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Genre: {{movie.genre}}</h6>
+                <p class="card-text">{{movie.description}}</p>
+                <a class="btn btn-secondary" style="margin:5px" (click)="goBack()">Back</a>
+                <a class="btn btn-secondary" style="margin:5px" routerLink="/movies/{{movie.id}}/edit">Edit</a>
+                <a class="btn btn-secondary" style="margin:5px" (click)="openDeleteModal()">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="list-group">
+    <a *ngFor="let movie of movies | async" routerLink="/movies/{{movie.id}}" class="list-group-item list-group-item-action list-group-item-dark">
+        {{movie.title}} ({{movie.year}})
+    </a>
+</div>

@@ -1,0 +1,9 @@
+<div class="card-columns">
+  <div *ngFor="let movie of movies | async" class="card text-white bg-dark mb-3">
+    <div class="card-body">
+      <img class="card-img-top mb-3" src="{{movie.picture}}" alt="Card image cap">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <a routerLink="/movies/{{movie.id}}" class="card-link stretched-link"></a>
+    </div>
+  </div>
+</div>
